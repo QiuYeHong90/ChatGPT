@@ -22,6 +22,9 @@
 		71BBAD5329C07C3700FEBDEC /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBAD5229C07C3700FEBDEC /* AppConfig.swift */; };
 		71BBAD5629C0816600FEBDEC /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBAD5529C0816600FEBDEC /* ChatInputView.swift */; };
 		71BBAD5829C0819100FEBDEC /* ChatInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BBAD5729C0819100FEBDEC /* ChatInputView.xib */; };
+		71D57CCF29C1C39500DF1559 /* ChatEmojiItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D57CCE29C1C39500DF1559 /* ChatEmojiItemCell.swift */; };
+		71D57CD229C1C77500DF1559 /* ChatEmojiIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D57CD029C1C77500DF1559 /* ChatEmojiIconCell.swift */; };
+		71D57CD329C1C77500DF1559 /* ChatEmojiIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D57CD129C1C77500DF1559 /* ChatEmojiIconCell.xib */; };
 		71FFFCAF29C1659C003D10D6 /* ChatEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFFCAE29C1659C003D10D6 /* ChatEmojiView.swift */; };
 		71FFFCB129C1670E003D10D6 /* ChatEmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FFFCB029C1670E003D10D6 /* ChatEmojiView.xib */; };
 		71FFFCB329C1705B003D10D6 /* ChatServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFFCB229C1705B003D10D6 /* ChatServiceView.swift */; };
@@ -70,6 +73,9 @@
 		71BBAD5229C07C3700FEBDEC /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		71BBAD5529C0816600FEBDEC /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
 		71BBAD5729C0819100FEBDEC /* ChatInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputView.xib; sourceTree = "<group>"; };
+		71D57CCE29C1C39500DF1559 /* ChatEmojiItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmojiItemCell.swift; sourceTree = "<group>"; };
+		71D57CD029C1C77500DF1559 /* ChatEmojiIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmojiIconCell.swift; sourceTree = "<group>"; };
+		71D57CD129C1C77500DF1559 /* ChatEmojiIconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatEmojiIconCell.xib; sourceTree = "<group>"; };
 		71FFFCAE29C1659C003D10D6 /* ChatEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmojiView.swift; sourceTree = "<group>"; };
 		71FFFCB029C1670E003D10D6 /* ChatEmojiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatEmojiView.xib; sourceTree = "<group>"; };
 		71FFFCB229C1705B003D10D6 /* ChatServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceView.swift; sourceTree = "<group>"; };
@@ -213,6 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				71FFFCBD29C1A203003D10D6 /* ChatEmojiContentView.swift */,
+				71D57CCE29C1C39500DF1559 /* ChatEmojiItemCell.swift */,
+				71D57CD029C1C77500DF1559 /* ChatEmojiIconCell.swift */,
+				71D57CD129C1C77500DF1559 /* ChatEmojiIconCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +361,7 @@
 				71FFFCB929C1761E003D10D6 /* ChatServiceItemCell.xib in Resources */,
 				71FFFCB129C1670E003D10D6 /* ChatEmojiView.xib in Resources */,
 				71BBAD2A29C0772A00FEBDEC /* LaunchScreen.storyboard in Resources */,
+				71D57CD329C1C77500DF1559 /* ChatEmojiIconCell.xib in Resources */,
 				71BBAD5829C0819100FEBDEC /* ChatInputView.xib in Resources */,
 				71BBAD2729C0772A00FEBDEC /* Assets.xcassets in Resources */,
 				71FFFCB529C17063003D10D6 /* ChatServiceView.xib in Resources */,
@@ -486,7 +496,9 @@
 				71BBAD2229C0772900FEBDEC /* ViewController.swift in Sources */,
 				71BBAD1E29C0772900FEBDEC /* AppDelegate.swift in Sources */,
 				71BBAD5329C07C3700FEBDEC /* AppConfig.swift in Sources */,
+				71D57CD229C1C77500DF1559 /* ChatEmojiIconCell.swift in Sources */,
 				71FFFCAF29C1659C003D10D6 /* ChatEmojiView.swift in Sources */,
+				71D57CCF29C1C39500DF1559 /* ChatEmojiItemCell.swift in Sources */,
 				71FFFCB329C1705B003D10D6 /* ChatServiceView.swift in Sources */,
 				71BBAD4F29C0786800FEBDEC /* NetWork.swift in Sources */,
 				71BBAD5129C07BC500FEBDEC /* BaseNetwork.swift in Sources */,
