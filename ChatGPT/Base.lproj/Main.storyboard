@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatGPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2W-zD-rBz" customClass="ChatInputView" customModule="ChatGPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="752" width="393" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="100" id="3nc-9t-oK3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HBA-LP-TeU">
+                                <rect key="frame" x="0.0" y="59" width="393" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HBA-LP-TeU" secondAttribute="trailing" id="1xM-MI-8xf"/>
+                            <constraint firstItem="t2W-zD-rBz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4mG-iI-Md8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t2W-zD-rBz" secondAttribute="trailing" id="Jah-UV-Obe"/>
+                            <constraint firstItem="t2W-zD-rBz" firstAttribute="top" secondItem="HBA-LP-TeU" secondAttribute="bottom" id="TI8-gI-Ns0"/>
+                            <constraint firstItem="HBA-LP-TeU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fZ2-WH-AP4"/>
+                            <constraint firstAttribute="bottom" secondItem="t2W-zD-rBz" secondAttribute="bottom" id="oLg-HF-D1I"/>
+                            <constraint firstItem="HBA-LP-TeU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="va8-e1-9nU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputViewF" destination="t2W-zD-rBz" id="Qld-Yb-l0J"/>
+                        <outlet property="inputViewF_bottom" destination="oLg-HF-D1I" id="0EJ-fF-KUW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.351145038167935" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
