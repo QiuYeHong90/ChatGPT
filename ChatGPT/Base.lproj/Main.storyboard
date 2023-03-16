@@ -44,6 +44,7 @@
                     <connections>
                         <outlet property="inputViewF" destination="t2W-zD-rBz" id="Qld-Yb-l0J"/>
                         <outlet property="inputViewF_bottom" destination="oLg-HF-D1I" id="0EJ-fF-KUW"/>
+                        <outlet property="tableView" destination="HBA-LP-TeU" id="AJC-Tj-4l9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

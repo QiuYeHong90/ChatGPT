@@ -8,7 +8,7 @@
 import Moya
 import Foundation
 enum NetWork {
-    case sendMsg(text: String)
+    case sendMsg(messages: [MessageBodyModel])
 }
 
 extension NetWork: BaseNetwork {
@@ -21,10 +21,11 @@ extension NetWork: BaseNetwork {
     var task: Moya.Task {
         var params: [String: Any] = [:]
         switch self {
-        case .sendMsg(let text):
+        case .sendMsg(let messages):
             params["model"] = "gpt-3.5-turbo"
-            params["text"] = text
+            params["messages"] = messages.toJSON()
         }
+        print("params = \(params)")
         return Moya.Task.requestParameters(parameters: params, encoding: JSONEncoding.default)
     }
     

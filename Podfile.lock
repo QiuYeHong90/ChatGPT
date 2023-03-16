@@ -8,6 +8,12 @@ PODS:
     - Result (~> 4.1)
   - ObjectMapper (4.2.0)
   - Result (4.1.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
@@ -15,6 +21,9 @@ DEPENDENCIES:
   - GrowingTextView
   - Moya (= 13.0.1)
   - ObjectMapper
+  - RxCocoa
+  - RxRelay
+  - RxSwift
   - SnapKit
 
 SPEC REPOS:
@@ -24,6 +33,9 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - Result
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -32,8 +44,11 @@ SPEC CHECKSUMS:
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: bc1e0e912a7b1273ad640ac0a578154cf6fe4948
+PODFILE CHECKSUM: 0eea088a43afd3ec1eae208ae23cb9939767bce8
 
 COCOAPODS: 1.11.3

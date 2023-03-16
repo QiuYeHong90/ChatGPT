@@ -16,6 +16,8 @@ class ChatInputView: UIView {
     
     @IBOutlet weak var textView_height: NSLayoutConstraint!
     @IBOutlet weak var textView: GrowingTextView!
+    var sendCall: ((String?)-> Void)?
+    
     
     enum KeyBoardStatus: Equatable {
         case showText
@@ -214,6 +216,7 @@ extension ChatInputView : GrowingTextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             print("发送消息 ====\(textView.text)")
+            self.sendCall?(textView.text)
             self.textView.text = ""
             self.textView.resignFirstResponder()
             return false

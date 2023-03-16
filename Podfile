@@ -11,6 +11,9 @@ target 'ChatGPT' do
   pod 'ObjectMapper'
   pod 'SnapKit'
   pod 'GrowingTextView'
+  pod 'RxSwift'
+  pod 'RxRelay'
+  pod 'RxCocoa'
   target 'ChatGPTTests' do
     inherit! :search_paths
     # Pods for testing
