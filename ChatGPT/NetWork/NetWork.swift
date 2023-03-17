@@ -8,8 +8,11 @@
 import Moya
 import Foundation
 enum NetWork {
+    static var provider = MoyaProvider<Self>()
+    
     case sendMsg(messages: [MessageBodyModel])
 }
+
 
 extension NetWork: BaseNetwork {
     var path: String {
@@ -28,6 +31,4 @@ extension NetWork: BaseNetwork {
         print("params = \(params)")
         return Moya.Task.requestParameters(parameters: params, encoding: JSONEncoding.default)
     }
-    
-    
 }

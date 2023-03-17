@@ -11,7 +11,6 @@ import UIKit
 
 class ChatListViewModel: NSObject {
     var dataArray: BehaviorRelay<[MessageBodyModel]>  = .init(value: [])
-    var provider = MoyaProvider<NetWork>()
     
     
     func sendMsg(msg: String) {
@@ -21,26 +20,23 @@ class ChatListViewModel: NSObject {
         orignList.append(msgModel)
         self.dataArray.accept(orignList)
         let messages = orignList
-        self.provider.request(.sendMsg(messages: messages)) { result in
+        NetWork.sendMsg(messages: messages).request(modelType: ChatCompletion.self) { result in
             switch result {
             
             case .success(let value):
-                let json = try? value.mapString()
-                
-                let model = ChatCompletion.init(respone: value)
-                let list = model?.choices ?? []
+                let list = value?.choices ?? []
                 for item in list {
                     let msgB = item.mapTo()
                     orignList.append(msgB)
                 }
                 self.dataArray.accept(orignList)
                 print("dataArray === \(self.dataArray)")
-                print("json === \(json)")
                 break
             case .failure(let error):
                 break
             }
         }
+        
     }
     
     

@@ -43,10 +43,12 @@ class ViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         self.tableView.rx.modelSelected(MessageBodyModel.self).subscribe { event in
-            print("=== \(event.event)")
+            print("=== \(event.element)")
         }.disposed(by: disposeBag)
         
-        
+        self.tableView.rx.itemSelected.subscribe { event in
+            print("=== \(event.element)")
+        }.disposed(by: disposeBag)
     }
 
 
@@ -54,17 +56,3 @@ class ViewController: UIViewController {
 
 
 
-import ObjectMapper
-
-extension ObjectMapper.Mappable {
-    init?(respone:Moya.Response, context: MapContext? = nil) {
-        guard let json = try? respone.mapJSON() as? [String: Any] else {
-            return nil
-        }
-        if let obj: Self = Mapper(context: context).map(JSON: json) {
-            self = obj
-        } else {
-            return nil
-        }
-    }
-}
